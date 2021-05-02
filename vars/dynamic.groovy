@@ -1,5 +1,3 @@
-import br.com.core.PipeSteps
-
 def call() {
     node {
         git url: repositor
