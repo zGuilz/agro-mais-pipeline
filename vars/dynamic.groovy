@@ -4,9 +4,11 @@ def call() {
 
         stages {
             stage('Deploy') {
-
                 steps {
-                    gcloud app deploy
+                    step{
+                        gcloud app deploy
+                    }
+
                 }
             }
         }
