@@ -1,9 +1,20 @@
 def call() {
-    node {
-        git url: repositor
+    pipeline {
 
-        stage ("Deploy Google Cloud") {
-            sh gcloud app deploy
+        agent any
+
+        node {
+            git url: repositor
+
+            stage ("Deploy Google Cloud") {
+
+                steps{
+                    gcloud app deploy
+                }
+
+            }
         }
     }
+
+
 }
