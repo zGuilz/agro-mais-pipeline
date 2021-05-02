@@ -5,10 +5,7 @@ def call() {
         stages {
             stage('Deploy') {
                 steps {
-                    step{
-                        gcloud app deploy
-                    }
-
+                    echo "Olá"
                 }
             }
         }
