@@ -1,24 +1,15 @@
 def call() {
     pipeline {
-
         agent any
 
-            stages{
+        stages {
+            stage('Deploy') {
 
-                stage("Checkout Project"){
-                    git url: repositor
-                }
-
-                stage ("Deploy Google Cloud") {
-
-                    steps{
-                        gcloud app deploy
-                    }
-
+                steps {
+                    sh gcloud app deploy
                 }
             }
-
-
+        }
     }
 
 }
