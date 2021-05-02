@@ -3,7 +3,6 @@ def call() {
 
         agent any
 
-        node {
             stages{
 
                 stage("Checkout Project"){
@@ -19,8 +18,7 @@ def call() {
                 }
             }
 
-        }
-    }
 
+    }
 
 }
