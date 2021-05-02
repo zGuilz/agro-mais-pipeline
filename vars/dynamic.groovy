@@ -1,6 +1,6 @@
 import br.com.core.PipeSteps
 
-def call(repositor) {
+def call(String repositor) {
     node {
         git url: repositor
 
