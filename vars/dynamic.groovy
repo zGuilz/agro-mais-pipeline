@@ -6,7 +6,7 @@ def call() {
             stage('Deploy') {
 
                 steps {
-                    sh gcloud app deploy
+                    gcloud app deploy
                 }
             }
         }
