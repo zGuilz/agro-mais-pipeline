@@ -4,15 +4,21 @@ def call() {
         agent any
 
         node {
-            git url: repositor
+            stages{
 
-            stage ("Deploy Google Cloud") {
-
-                steps{
-                    gcloud app deploy
+                stage("Checkout Project"){
+                    git url: repositor
                 }
 
+                stage ("Deploy Google Cloud") {
+
+                    steps{
+                        gcloud app deploy
+                    }
+
+                }
             }
+
         }
     }
 
